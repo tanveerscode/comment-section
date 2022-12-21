@@ -32,22 +32,6 @@ const createCommentObject = (commentText) => {
     replies: [],
   };
 };
-// 8. searching in array for comment which id is similar to the current comment id...
-const findCommentObject = (comments, commentId) => {
-  for (let i = 0; i < comments.length; i++) {
-    const comment = comments[i];
-
-    if (comment.id === commentId) {
-      return comment;
-    }
-                                 // now here we are checking in replies 
-    const foundComment = findCommentObject(comment.replies, commentId);
-
-    if (foundComment) {
-      return foundComment;
-    }
-  }
-};
 
 const deleteComment = (comments, commentId) => {
   for (let i = 0; i < comments.length; i++) {
@@ -116,12 +100,9 @@ const createCommentNode = (comment) => {
       alert("Please enter a reply");
       return;
     }
-//7. making an object for   new reply by using createCommentObject and also create an object for replies and push 
+//7. making an object for new reply by using createCommentObject 
     const newReplyObject = createCommentObject(replyText);
-
-    const commentObj = findCommentObject(comments, commentId);   // searching comment for id which has to replied.we find an object from here
- 
-    commentObj.replies.push(newReplyObject);                    // and push the new reply in this object reply section,
+    comment.replies.unshift(newReplyObject);  
  
     saveState();
     renderComments();
@@ -174,7 +155,7 @@ const addComment = () => {
     return;
   }
   const newCommentObject = createCommentObject(commentText);
-  comments.push(newCommentObject);
+  comments.unshift(newCommentObject);
   saveState();
   commentInput.value = "";
   renderComments();
