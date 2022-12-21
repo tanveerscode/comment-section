@@ -1,110 +1,142 @@
 body{
     display: flex;
     justify-content: center;
+    background-color: #a7868e;
+    font-family: "Verdana", sans-serif;
 }
 .post{
-    height: 200px;
-    font-size: 20px;
+    color: white;
     margin-left: 30px;
-    background-color: #b0a2a6;
-    border-radius: 10px;
+    border:2px solid #332f44;
+    border-radius: 5px;
+    background-color: rgb(88, 109, 84);
 }
 .input-and-button-wrapper {
     display: flex;
     margin-top: 5px;
     margin-left: 30px;
-  }
-  .comment-input{
-    font-size: 20px;
-    height: 40px;
-  }
-  textarea{
-    resize: none;
-  }
-  
-  .button {
-    min-width: 34px;
-    min-height: 30px;
-    border-radius:0;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-size: 0.875;
-    border: none;
-    color: white;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-  .success {
-    background-color: #009ada;
-  }
-  
-  .success:hover {
-    background-color: #0ba5e5;
-  }
-  
-  .delete {
-    background-color: #ec164c;
-  }
-  
-  .delete:hover {
-    background-color: #f44572;
-  }
-  
-  .add-button {
-    margin-left: 8px;
-  }
-  
-  .comment-wrapper {
-    width: 600px;
-    margin: 20px auto;
-  }
-  
-  .comment {
-    margin-left: 28px;
-    margin-top: 8px;
-  }
-  
-  .comment-text {
-    font-size: 25px;
-    background-color: rgba(216, 216, 216, 0.924);
-    border-radius: 5px;
-  }
-  
-  .button-and-likes-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 2px;
-  }
-  
-  .likes-text {
-    font-size: 20px;
-  }
-  
-  .reply-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 8px;
-  }
-  
-  .hide-reply > .reply-wrapper {
-    display: none;
-  }
-  textarea.noScroll {overflow: hidden }
-  .comment-input::-webkit-scrollbar {
-
-    display: none;
-    
-    }
-
-/* input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
 }
-input[type="text"] {
-  -moz-appearance: textfield;
-} */
+.comment-input{
+  background-color: #a9b3b1;
+  font-size: 20px;
+  height: 40px;
+  border:2px solid rgba(11, 48, 39, 0.924);
+  border-radius: 5px;
+  margin-top: 0px;
+  width: 440px;
+}
+textarea{
+  resize: none;
+}
+  
+.button {
+  min-width: 34px;
+  min-height: 30px;
+  border-radius:5px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 0.875;
+  border: none;
+  color: white;
+  box-shadow: 2px 2px 3px rgba(32, 5, 5, 0.993);
+  cursor: pointer;
+  padding-left: 16px;
+  padding-right: 16px;
+
+}
+.success {
+  background-color: #2f5f74;
+}
+  
+.success:hover {
+  background-color: #1f7fa8;
+}
+
+.delete {
+  background-color: #830a28;
+}
+
+.delete:hover {
+  background-color: #dd043b;
+}
+
+.add-button {
+  margin-left: 8px;
+}
+  
+.comment-wrapper {
+  margin: 20px auto;
+  
+}
+
+.comment {
+  margin-left: 28px;
+  margin-top: 30px;
+  border-left:2px solid #332f44;
+  width: 450px;
+  
+  
+}
+
+.comment-text {
+  color: #f7f1f1;
+  font-size: 20px;
+  padding: 5px;
+  background-color: #332f44;
+  border-radius: 0px 10px 10px 0px;
+  font-family: "Verdana", sans-serif;
+}
+
+.button-and-likes-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2px;
+  height: 25px;
+  width: 100%;
+}
+
+.likes-text {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: px;
+  font-size: 15px;
+  background-color: rgb(56, 2, 2);
+  min-width: 34px;
+  min-height: 30px;
+  font-family: "Arial", sans-serif;
+  border-radius: 5px;
+}
+
+.reply-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+
+  
+  
+}
+.reply-input {
+  width: 150px;
+  height: 30px;
+  font-size: 15px;
+  border:2px solid #ebeef0;
+  background-color: #5c5677;
+  color: white;
+}
+
+
+.hide-reply > .reply-wrapper {
+  display: none ;
+}
+
+.comment-input::-webkit-scrollbar {
+display: none;
+}
+
+.reply-input::-webkit-scrollbar {
+display: none;
+}
