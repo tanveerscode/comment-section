@@ -1,9 +1,8 @@
-//1.grabbing  nodes 
-
+                                                                                  //1.grabbing  nodes 
 const commentWrapper = document.querySelector(".comment-wrapper");
 const commentInput = document.querySelector(".comment-input");
 const addButton = document.querySelector(".add-button");
-//-----------------------------
+
 const localStorageKey = "state";
 
 const initializeComments = () => {
@@ -23,7 +22,7 @@ const saveState = () => {
   localStorage.setItem(localStorageKey, state);
 };
 
-// 4. creating coomment object fuction it will create comment object with id,text,likes,and reply option
+                                                        // 4. creating coomment object fuction it will create comment object with id,text,likes,and reply options
 const createCommentObject = (commentText) => {
   return {
     id: Math.random(),
@@ -44,7 +43,7 @@ const deleteComment = (comments, commentId) => {
     deleteComment(comment.replies, commentId);
   }
 };
-// 5. creating commentnode and class //comment structure     
+                                                                 // 5. creating commentnode and class //comment structure     
 const createCommentNode = (comment) => {
   const commentNode = document.createElement("div");
   commentNode.classList.add("comment", "hide-reply");
@@ -80,13 +79,14 @@ const createCommentNode = (comment) => {
   };
 
   const likeText = document.createElement("div");
-  likeText.innerText = `${comment.likes} likes`;
+  likeText.innerText = `${comment.likes} Likes`;
   likeText.classList.add("likes-text");
-//6. structure for reply section---input,add,cancel
+                                                                         //6. structure for reply section---input,add,cancel
   const replyWrapper = document.createElement("div");
   replyWrapper.classList.add("reply-wrapper");
 
-  const replyInput = document.createElement("input");
+  const replyInput = document.createElement("textarea");
+  replyInput.classList.add("reply-input");
 
   const addReplyButton = document.createElement("button");
   addReplyButton.classList.add("button", "success");
@@ -100,14 +100,13 @@ const createCommentNode = (comment) => {
       alert("Please enter a reply");
       return;
     }
-//7. making an object for new reply by using createCommentObject 
-    const newReplyObject = createCommentObject(replyText);
-    comment.replies.unshift(newReplyObject);  
- 
+                                                            //7. making an object for   new reply by using createCommentObject and also create an object for replies and push 
+    const newReplyObject = createCommentObject(replyText);                  
+    comment.replies.unshift(newReplyObject); 
     saveState();
     renderComments();
   };
-//9.
+
   const cancelReplyButton = document.createElement("button");
   cancelReplyButton.classList.add("button", "delete");
   cancelReplyButton.innerText = "Cancel";
@@ -116,7 +115,7 @@ const createCommentNode = (comment) => {
   const replyCommentsDomArray = comment.replies.map((reply) => {
     return createCommentNode(reply);
   });
-// 10.building relation between nodes
+// 8.building relation between nodes
   commentNode.appendChild(commentText);
   commentNode.appendChild(buttonsAndLikesWrapper);
   commentNode.appendChild(replyWrapper);
@@ -136,7 +135,7 @@ const createCommentNode = (comment) => {
 
   return commentNode;
 };
-// 4.for displaying comment on screen in a chain like structure
+                                                                     // 4.for displaying comment on screen in a chain like structure
 const renderComments = () => {
   commentWrapper.innerText = "";     // clearing the previous comment.
 
@@ -146,7 +145,7 @@ const renderComments = () => {
     commentWrapper.appendChild(commentNode);
   });
 };
-// 3. add comment function for taking comment input, and creating newcommentObject and pushing into 'comments' array and then render
+                                                       // 3. add comment function for taking comment input, and creating newcommentObject and pushing into 'comments' array and then render
 const addComment = () => {
   const commentText = commentInput.value;
 
@@ -155,11 +154,13 @@ const addComment = () => {
     return;
   }
   const newCommentObject = createCommentObject(commentText);
+  // comments.unshift(newCommentObject);
   comments.unshift(newCommentObject);
   saveState();
   commentInput.value = "";
   renderComments();
 };
-//2. adding event listener for calling add comment function and then render.................
+                                                      //2. adding event listener for calling add comment function
 addButton.addEventListener("click", addComment);
+
 renderComments();
