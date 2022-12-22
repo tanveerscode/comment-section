@@ -13,25 +13,26 @@ body{
 }
 .input-and-button-wrapper {
     display: flex;
-    margin-top: 5px;
-    margin-left: 30px;
+    margin-top: .313rem;
+    margin-left: 1.875rem;
 }
 .comment-input{
   background-color: #a9b3b1;
-  font-size: 20px;
-  height: 40px;
+  font-size: 1.25rem;
+  height: 2.5rem;
   border:2px solid rgba(11, 48, 39, 0.924);
-  border-radius: 5px;
+  border-radius: .313rem;
   margin-top: 0px;
-  width: 440px;
+  width: 27.5rem;
 }
 textarea{
   resize: none;
 }
+
   
 .button {
-  min-width: 34px;
-  min-height: 30px;
+  min-width: 2.125rem;
+  min-height: 1.875rem;
   border-radius:5px;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
@@ -40,8 +41,8 @@ textarea{
   color: white;
   box-shadow: 2px 2px 3px rgba(32, 5, 5, 0.993);
   cursor: pointer;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 
 }
 .success {
@@ -70,10 +71,10 @@ textarea{
 }
 
 .comment {
-  margin-left: 28px;
-  margin-top: 30px;
+  margin-left: 1.75rem;
+  margin-top: 1.875rem;
   border-left:2px solid #332f44;
-  width: 500px;
+  width: 31.25rem;
 }
 
 .comment-text {
@@ -90,7 +91,7 @@ textarea{
   align-items: center;
   gap: 8px;
   margin-top: 2px;
-  height: 25px;
+  height: 1.563rem;
   width: 100%;
 }
 
@@ -113,6 +114,9 @@ textarea{
   align-items: center;
   gap: 8px;
   margin-top: 8px;
+
+  
+  
 }
 .reply-input {
   width: 150px;
@@ -122,6 +126,7 @@ textarea{
   background-color: #5c5677;
   color: white;
 }
+
 
 .hide-reply > .reply-wrapper {
   display: none ;
@@ -133,4 +138,41 @@ display: none;
 
 .reply-input::-webkit-scrollbar {
 display: none;
+}
+.container{
+  width: auto;
+}
+@media (max-width: 700px) {
+  body{
+    margin-top: 50px;
+  }
+  .comment-input{
+    background-color: #a9b3b1;
+    font-size: 1.25rem;
+    height: 100%;
+    border:2px solid rgba(11, 48, 39, 0.924);
+    border-radius: .313rem;
+    margin-top: 0px;
+    width: 100%;
+  }
+  .input-and-button-wrapper {
+    display: flex;
+    margin-top: .313rem;
+    margin-left: 1.875rem;
+    width: 90%;
+}
+.post{
+  width: 90%;
+  color: white;
+  margin-left: 30px;
+  border:2px solid #332f44;
+  border-radius: 5px;
+  background-color: rgb(88, 109, 84);
+}
+.comment {
+  margin-left: 1.75rem;
+  margin-top: 1.875rem;
+  border-left:2px solid #332f44;
+  
+}
 }
