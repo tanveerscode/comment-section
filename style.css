@@ -75,6 +75,7 @@ textarea{
   margin-top: 1.875rem;
   border-left:2px solid #332f44;
   width: 31.25rem;
+  overflow-wrap: break-word;
 }
 
 .comment-text {
