@@ -1,15 +1,16 @@
 body{
     display: flex;
     justify-content: center;
-    background-color: #a7868e;
+    background-color: 
+      #a7868e;
     font-family: "Verdana", sans-serif;
 }
 .post{
-    color: white;
+    color: black;
     margin-left: 30px;
     border:2px solid #332f44;
     border-radius: 5px;
-    background-color: rgb(88, 109, 84);
+    background-color: #998d90;
 }
 .input-and-button-wrapper {
     display: flex;
@@ -80,10 +81,10 @@ textarea{
 
 .comment-text {
   color: #f7f1f1;
-  font-size: 20px;
-  padding: 5px;
+  font-size: 18px;
+  padding: 15px;
   background-color: #332f44;
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 0px 10px 0px 0px;
   font-family: "Verdana", sans-serif;
 }
 
@@ -91,23 +92,31 @@ textarea{
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-top: 2px;
-  height: 1.563rem;
-  width: 100%;
+  margin-top: 0px;
+  height: 1.9rem;
+  max-width: 31.25rem;
+  background-color: #332f44;
+  padding: 15px;
+  border-radius: 0px 0px 10px 0px;
 }
 
 .likes-text {
-  color: white;
+  position: relative;
+  left: 13vw;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: px;
-  font-size: 15px;
-  background-color: rgb(56, 2, 2);
+  
+  color: rgb(248, 71, 110);
+  background-color: #332f44;
   min-width: 34px;
   min-height: 30px;
   font-family: "Arial", sans-serif;
+  font-size: 15px;
+  font-weight:bold;
   border-radius: 5px;
+ 
 }
 
 .reply-wrapper {
